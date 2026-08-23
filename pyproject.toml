@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "brand-gate"
+version = "0.1.0"
+description = "A Claude Code skill that brands every deliverable by default - and the gate that refuses any file that is off-brand"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [{name = "Joseph Bisaccia"}]
+requires-python = ">=3.10"
+keywords = ["claude-code", "skill", "brand", "docx", "pptx", "gate", "ci"]
+dependencies = ["python-docx", "python-pptx", "openpyxl"]
+
+[project.optional-dependencies]
+dev = ["pytest"]
+
+[project.urls]
+Homepage = "https://getaiintegrations.com/projects"
+Repository = "https://github.com/jbisaccia-9/brand-gate"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]

@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+src/brand_gate.egg-info/PKG-INFO
+src/brand_gate.egg-info/SOURCES.txt
+src/brand_gate.egg-info/dependency_links.txt
+src/brand_gate.egg-info/requires.txt
+src/brand_gate.egg-info/top_level.txt
+src/brandgate/__init__.py
+src/brandgate/__main__.py
+src/brandgate/samples.py

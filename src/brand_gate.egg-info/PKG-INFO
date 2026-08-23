@@ -1,0 +1,32 @@
+Metadata-Version: 2.4
+Name: brand-gate
+Version: 0.1.0
+Summary: A Claude Code skill that brands every deliverable by default - and the gate that refuses any file that is off-brand
+Author: Joseph Bisaccia
+License: MIT
+Project-URL: Homepage, https://getaiintegrations.com/projects
+Project-URL: Repository, https://github.com/jbisaccia-9/brand-gate
+Keywords: claude-code,skill,brand,docx,pptx,gate,ci
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: python-docx
+Requires-Dist: python-pptx
+Requires-Dist: openpyxl
+Provides-Extra: dev
+Requires-Dist: pytest; extra == "dev"
+
+# brand-gate
+
+## Setup
+
+This project uses a project-local virtual environment (`.venv`) so its
+packages live with the project, not your system Python.
+
+```bash
+python3 -m venv .venv          # create the project's own interpreter
+source .venv/bin/activate      # activate it (run in each new terminal session)
+pip install -r requirements.txt
+```
+
+Point your IDE's Python interpreter at `.venv/bin/python` so the IDE and
+terminal run the exact same Python.

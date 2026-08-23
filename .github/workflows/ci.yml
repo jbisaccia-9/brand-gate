@@ -1,0 +1,16 @@
+name: ci
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: pip install -e ".[dev]"
+      - run: pytest -q
+      - run: python -m brandgate build out/onbrand
+      - run: python -m brandgate check out/onbrand
+      - run: python -m brandgate offbrand out/offbrand
+      # The refusal is the assertion: the gate MUST fail on the counterexamples.
+      - run: "! python -m brandgate check out/offbrand"
