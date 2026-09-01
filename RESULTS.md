@@ -1,6 +1,6 @@
 # Results
 
-Generated 2026-08-22 by `scripts/make_results.py` — every block below is captured command output, not prose.
+Generated 2026-09-01 by `scripts/make_results.py` — every block below is captured command output, not prose.
 
 ## Unit tests
 
@@ -8,7 +8,7 @@ Generated 2026-08-22 by `scripts/make_results.py` — every block below is captu
 
 ```
 .....                                                                    [100%]
-5 passed in 0.53s
+5 passed in 0.63s
 ```
 
 ## Build on-brand samples
